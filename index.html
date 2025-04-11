@@ -63,6 +63,15 @@
             </ul>
 
         <img src="1_zicBcGvY3wPGvTSKe8-vjQ.png" alt="OAuth Diagram" width="400">
+
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+        </audio>
+
+        <video width="640" height="360" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </main>
 
     <hr>
@@ -70,50 +79,41 @@
 
     <form>
         <fieldset>
-          <legend>Sign Up</legend>
-      
-          <!-- Text input -->
+          <legend>Spotify or Apple Music</legend>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name"><br><br>
       
-          <!-- Date input -->
           <label for="dob">Date of Birth:</label>
           <input type="date" id="dob" name="dob"><br><br>
+
+          <p>Spotify or Apple Music</p>
+          <input type="radio" id="spotify" name="role" value="spotify">
+          <label for="dev">Spotify</label><br>
+          <input type="radio" id="applemusic" name="role" value="applemusic">
+          <label for="des">Apple Music</label><br><br>
       
-          <!-- Radio buttons -->
-          <p>Choose your role:</p>
-          <input type="radio" id="dev" name="role" value="developer">
-          <label for="dev">Developer</label><br>
-          <input type="radio" id="des" name="role" value="designer">
-          <label for="des">Designer</label><br><br>
+          <input type="checkbox" id="spotifyquestion" name="spotifyquestion">
+          <label for="newsletter">Spotify is better</label><br><br>
       
-          <!-- Checkbox -->
-          <input type="checkbox" id="newsletter" name="newsletter">
-          <label for="newsletter">Subscribe to newsletter</label><br><br>
+          <label for="bio">Explain Why:</label><br>
+          <textarea id="bio" name="reasoning" rows="5" cols="50"></textarea><br><br>
       
-          <!-- Textarea -->
-          <label for="bio">Short bio:</label><br>
-          <textarea id="bio" name="bio" rows="4" cols="30"></textarea><br><br>
-      
-          <!-- Select dropdown -->
-          <label for="level">Skill level:</label>
+          <label for="level">Music Level</label>
           <select id="level" name="level">
             <option value="beginner">Beginner</option>
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
           </select><br><br>
       
-          <!-- Datalist (auto-suggest input) -->
-          <label for="language">Favorite language:</label>
+          <label for="language">Favorite Genres:</label>
           <input list="languages" id="language" name="language">
           <datalist id="languages">
-            <option value="JavaScript">
-            <option value="Python">
-            <option value="C++">
-            <option value="Go">
+            <option value="Pop">
+            <option value="Indie">
+            <option value="Hip-Hop">
+            <option value="Rock">
           </datalist><br><br>
       
-          <!-- Button -->
           <button type="submit">Submit</button>
         </fieldset>
       </form>
