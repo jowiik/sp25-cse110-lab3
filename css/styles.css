@@ -32,7 +32,9 @@ body {
 /*CLASS*/
 .notice {
   background-color: rgba(255, 0, 0, 0.1);
-  border: 2px dashed color-mix(in srgb, red 50%, blue 50%);
+  border-style: dashed;
+  border-width: 2px;
+  border: color-mix(in srgb, red 50%, blue 50%);
   padding-top: 10px;    /* longhand padding */
   padding-right: 10px;
   padding-bottom: 10px;
@@ -149,8 +151,8 @@ main:has(img) {
 }
 .card {
   background: #fff;
-  & > h3 {
+}
+.card > h3 {
     text-transform: uppercase;
     margin-top: 0;
   }
-}
