@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*ROOT VARIABLES*/
+:root {
+  --main-color: #FF6347;
+  --accent-color: rgb(100,150,200);
+}
+
+/*UNIVERSAL SELECTOR*/
+* {
+  box-sizing: border-box;
+}
+
+/*ELEMENT SELECTORS*/
+body {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  padding: 1em;
+  background-color: hsl(200, 50%, 95%);
+  color: #9b2828;
+}
+
+/*ID Selector*/
+#sections {
+  background-color: var(--accent-color);
+  padding: 10px 5px;
+  margin: auto;
+  max-width: 800px;
+}
+
+/*CLASS*/
+.notice {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 2px dashed color-mix(in srgb, red 50%, blue 50%);
+  padding-top: 10px;    /* longhand padding */
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+/*ATTRIBUTE Selector */
+input[type="text"], textarea {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #666;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 1cm;
+}
+nav > a {
+  color: orange;
+}
+h3 + p {
+  font-style: italic;
+}
+h3 ~ ul {
+  margin-left: 20px;
+}
+
+a:hover {
+  color: var(--main-color);
+}
+button:active {
+  transform: scale(0.98);
+}
+
+.hidden { display: none; }
+.block-box { display: block; width: 50%; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+.card {
+  border-style: solid;
+  border-width: 3px;
+  border-color: hsl(340,80%,60%);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/*SIZE*/
+.card {
+  height: 200px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/*POSITIONING*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.container {
+  position: relative;
+}
+.floating-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.sticky-note {
+  position: sticky;
+  top: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-container > * {
+  flex: 1 1 100px;
+  margin: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  align-items: start;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.8rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+main:has(img) {
+  border: 2px solid #0077cc;
+  padding: 1rem;
+}
+.card {
+  background: #fff;
+  & > h3 {
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+}
